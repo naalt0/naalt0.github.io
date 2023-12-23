@@ -6,7 +6,9 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.9",
@@ -22,5 +24,6 @@
   "devDependencies": {
     "@babel/core": "^7.20.0"
   },
+  "homepage": "https://gitname.github.io/react-gh-pages",
   "private": true
 }
