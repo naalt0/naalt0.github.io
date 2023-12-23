@@ -1,7 +1,7 @@
 import React from 'react';
-import { Text, Dimensions, StyleSheet, View, ImageBackground, Image, TouchableOpacity } from 'react-native';
+import { Text, Dimensions, StyleSheet, View, ImageBackground, Image } from 'react-native';
 
-const { width, height } = Dimensions.get('window');
+const { height } = Dimensions.get('window');
 
 export default function SecondPage() {
     return (
@@ -12,10 +12,7 @@ export default function SecondPage() {
                     <Text style={styles.fine}>n. 100€ sakoilta</Text>
                     <Text style={[{fontSize: 25}]}>joka kerta, kun saat kalan</Text>
                 </View>
-
-                <TouchableOpacity onPress={() => console.log("Pointer clicked on second page")}>
-                    <Image source={require('../img/pointer.png')} style={styles.pointer} />
-                </TouchableOpacity>
+                <Image source={require('../img/pointer.png')} style={styles.pointer} />
             </ImageBackground>
         </View>
     );
@@ -35,7 +32,6 @@ const styles = StyleSheet.create({
     },
     fineText: {
         right: 55,
-        fontFamily: 'Leelawadee UI'
     },
     fine: {
         backgroundColor: '#00aeff',
@@ -46,7 +42,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     pointer: {
-      top: 340,
+      top: 320,
       width: 59,
       height: 102,
     }
